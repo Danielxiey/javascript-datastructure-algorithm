@@ -33,3 +33,5 @@ class Stack {
     return this.items.length;
   }
 }
+
+export default Stack;
