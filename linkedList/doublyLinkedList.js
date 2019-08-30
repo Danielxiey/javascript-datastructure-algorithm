@@ -152,7 +152,7 @@ export class DoublyLinkedList {
     }
     let current = this.head;
     let objectStr = `${current.element}`;
-    while(current.next != null) {
+    for(let i = 1; i < this.size(); i++) {
       current = current.next;
       objectStr = `${objectStr}, ${current.element}`;
     }
@@ -166,7 +166,7 @@ export class DoublyLinkedList {
     } else {
       let current = this.tail;
       let objectStr = `${current.element}`;
-      while(current.prev != null) {
+      for(let i = 1; i < this.size(); i++) {
         current = current.prev;
         objectStr = `${objectStr}, ${current.element}`;
       }

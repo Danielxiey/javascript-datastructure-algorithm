@@ -122,11 +122,10 @@ export class LinkedList {
     }
     let current = this.head;
     let objectStr = `${current.element}`;
-    while(current.next != null) {
+    for(let i = 1; i < this.size(); i++) {
       current = current.next;
-      objectStr = `${objectStr}, ${current.element}`;
-    } 
+      objectStr =`${objectStr}, ${current.element}`;
+    }
     return objectStr;
   }
-  
 }
