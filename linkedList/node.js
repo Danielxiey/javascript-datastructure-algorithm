@@ -4,3 +4,10 @@ export class Node {
     this.next = undefined;
   }
 }
+
+export class DoublyNode extends Node {
+  constructor(element, prev, next) {
+    super(element, next);
+    this.prev = prev;
+  } 
+}

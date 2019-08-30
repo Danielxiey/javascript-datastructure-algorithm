@@ -109,6 +109,12 @@ export class LinkedList {
     return this.head;
   }
 
+  //清空链表
+  clear() {
+    this.head = undefined;
+    this.count = 0;
+  }
+
   //将链表转换成一个字符串
   toString() {
     if(this.isEmpty()) {
