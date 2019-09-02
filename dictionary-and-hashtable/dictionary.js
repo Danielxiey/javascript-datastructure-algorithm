@@ -1,27 +1,7 @@
-function defaultToString(item) {
-  if(item === null) {
-    return 'NULL';
-  } else if(item === undefined) {
-    return 'UNDEFINED';
-  } else if(typeof item === 'string' || item instanceof String) {
-    return `${item}`;
-  } else {
-    return item.toString();
-  }
-}
+import {defaultToString} from './defaultToString';
+import {ValuePair} from './valuePair';
 
-class valuePair {
-  constructor(key, value) {
-    this.key = key;
-    this.value = value;
-  }
-
-  toString() {
-    return `[#${this.key}: ${this.value}]`;
-  }
-}
-
-class Dictionary {
+export class Dictionary {
   constructor(toStrFn = defaultToString) {
     this.table = {};
     this.toStrFn = toStrFn;
@@ -31,7 +11,7 @@ class Dictionary {
   set(key, value) {
     if(key != null && value != null) {
       let tableKey = this.toStrFn(key);
-      this.table[tableKey] = new valuePair(key, value);
+      this.table[tableKey] = new ValuePair(key, value);
       return true;
     } else {
       return false;
