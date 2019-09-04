@@ -5,3 +5,20 @@ export class Node {
     this.right = null;
   }
 }
+
+export const Color = {
+  RED: 'red',
+  BLACK: 'black'
+}
+
+export class RedBlackNode extends Node {
+  constructor(key) {
+    super(key);
+    this.color = Color.RED;
+    this.parent = null;
+  }
+
+  isRed() {
+    return this.color === Color.RED;
+  }
+}

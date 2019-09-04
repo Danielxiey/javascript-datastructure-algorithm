@@ -21,7 +21,7 @@ const BalanceFactor = {
   UNBALANCED_LEFT: 5
 }
 
-class AVLTree extends BinarySearchTree {
+export class AVLTree extends BinarySearchTree {
   constructor(compareFn = defaultCompare) {
     super(compareFn);
   }
